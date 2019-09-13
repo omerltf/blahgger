@@ -23,6 +23,10 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li style="float:right;">@using (Html.BeginForm("Logout", "Account"))
+                    {
+                        <button class="btn btn-default" type="submit"> Logout </button>
+                    }</li>
                 </ul>
             </div>
         </div>

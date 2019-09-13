@@ -1,0 +1,26 @@
+﻿@model List<Blahgger.Models.Blog>
+
+@{
+    ViewBag.Title = "BLog Posts";
+}
+
+<h2>Blog Posts</h2>
+
+@foreach (var post in Model)
+{
+    <div class="table-bordered">
+        <h3>@post.Title</h3>
+        <br />
+        <p>@post.Text</p>
+        <br />
+        <p>@post.CreatedOn</p>
+
+        <input type="submit" class="btn btn-default" value="Edit" />
+        <input type="submit" class="btn btn-danger" value="Delete"/>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Create New Post", "Create")
+</div>
+
