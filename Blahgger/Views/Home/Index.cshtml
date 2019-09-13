@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Home</h2>
+
+<div>
+    <a href="~/Blog/Index" type="submit">Blogs</a>
+</div>
+
+
+<p>Welcome @ViewBag.CurrentUserEmail!</p>
+
+<div>
+    @using (Html.BeginForm("Logout", "Account"))
+    {
+        <button class="btn btn-default" type="submit"> Logout </button>
+    }
+</div>
